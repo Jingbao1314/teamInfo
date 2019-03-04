@@ -1,0 +1,69 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<link th:href="@{/css/styleLogin.css}" rel='stylesheet' type='text/css' />
+	<meta charset="utf-8">
+	<title>login</title>
+</head>
+
+<body>
+<div class="header" id="head">
+	<div class="title">简历信息系统</div>
+
+</div>
+
+<div class="wrap" id="wrap">
+	<div class="logGet">
+        <form action="#" method="post">
+            <!-- 头部提示信息 -->
+            <div class="logD logDtip">
+                <p class="p1">登录</p>
+            </div>
+
+            <!-- 输入框 -->
+            <div class="lgD">
+                <img th:src="@{/images/userName.png}"/>
+                <input type="text"
+                       placeholder="输入姓名" id="uname" name="uname"/>
+            </div>
+            <div class="lgD">
+                <img th:src="@{/images/pass.png}"/>
+                <input type="password"
+                       placeholder="输入密码" id="upass" name="upass"/>
+            </div>
+
+            <div class="login">
+                <a><button>登录</button></a>
+            </div>
+        </form>
+        <div class="register">
+            <a href="http://127.0.0.1:8080/register" target="_self"><button>注册
+            </button></a>
+        </div>
+	</div>
+</div>
+
+<div class="footer" id="foot">
+	<div class="copyright">
+		<p>Copyright © 2018 Qunar.com Inc. All Rights Reserved.</p>
+		<div class="img">
+			<i class="icon"></i><span>联系邮箱：jiankangsun@yahoo.com</span>
+		</div>
+
+		<div class="img">
+			<i class="icon1"></i><span>联系地址：纪圩子</span>
+		</div>
+
+		<div class="img">
+			<i class="icon2"></i><span>联系电话：18888888888</span>
+		</div>
+
+
+	</div>
+
+</div>
+
+
+
+</body>
+</html>
