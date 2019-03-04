@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+//https://www.cnblogs.com/xiangxisheng/p/6916856.html mysql修改默认路径
 
 @Configuration
 public class CorsConfig {
