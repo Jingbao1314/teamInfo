@@ -13,11 +13,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Controller
 public class IndexController {
-    private String first="静宝";
+    private String first_name="静宝";
+    private String first_company="爱运动";
     @RequestMapping(value = "/index")
     public String index(ModelMap modelMap, HttpServletResponse response,
                         HttpServletRequest request){
-        modelMap.addAttribute("first",first);
+        modelMap.addAttribute("first_name",first_name);
+        modelMap.addAttribute("first_company",first_company);
         return "/index";
     }
 }

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>简历模板</title>
     <link rel="shortcut icon" href="//common-bucket.zhaopin.cn/img/favicon/favicon-2011.ico" />
@@ -44,14 +44,15 @@
                 <!--<span class="breadcrumb__text">现代商务Word简历模板(财务类)</span>-->
             <!--</div>-->
             <div class="template-preview">
-                <img src="https://desktop-bucket.zhaopin.cn/ts/resume-templates/100101003/preview.jpg?x-oss-process=image/resize,m_lfit,h_998,w_722" class="template-preview__main-image">
-                <div class="template-preview__title">模版详情</div>
-                <ul class="template-preview__list">
-                    <li class="template-preview__list-item">
-                        <img src="https://desktop-bucket.zhaopin.cn/ts/resume-templates/100101003/other-1.jpg?x-oss-process=image/resize,m_lfit,h_550,w_722"></li>
-                    <li class="template-preview__list-item">
-                        <img src="https://desktop-bucket.zhaopin.cn/ts/resume-templates/100101003/other-2.jpg?x-oss-process=image/resize,m_lfit,h_550,w_722"></li>
-                </ul>
+                <img th:src="'images/' + ${preview} + '.jpg'"
+                     class="template-preview__main-image">
+                <!--<div class="template-preview__title">模版详情</div>-->
+                <!--<ul class="template-preview__list">-->
+                    <!--<li class="template-preview__list-item">-->
+                        <!--<img src="https://desktop-bucket.zhaopin.cn/ts/resume-templates/100101003/other-1.jpg?x-oss-process=image/resize,m_lfit,h_550,w_722"></li>-->
+                    <!--<li class="template-preview__list-item">-->
+                        <!--<img src="https://desktop-bucket.zhaopin.cn/ts/resume-templates/100101003/other-2.jpg?x-oss-process=image/resize,m_lfit,h_550,w_722"></li>-->
+                <!--</ul>-->
             </div>
             <div class="a-affix side-card">
                 <div class="a-affix__container">

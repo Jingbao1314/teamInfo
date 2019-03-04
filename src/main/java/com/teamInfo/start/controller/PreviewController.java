@@ -16,8 +16,14 @@ public class PreviewController {
     @RequestMapping(value = "/preview")
     public String preview(Model model, HttpServletResponse response,
                         HttpServletRequest request) {
+        String id=request.getParameter("id");
+        System.out.println(id);
+        if (id!=null&&id!=""){
+            model.addAttribute("preview","preview"+request.getParameter("id"));
+        }else {
+            model.addAttribute("preview","preview");
+        }
         return "/preview";
-
     }
 
 }
