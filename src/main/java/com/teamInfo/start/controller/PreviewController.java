@@ -2,7 +2,9 @@ package com.teamInfo.start.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,14 +16,17 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class PreviewController {
     @RequestMapping(value = "/preview")
-    public String preview(Model model, HttpServletResponse response,
-                        HttpServletRequest request) {
+    public String preview(ModelMap modelMap, HttpServletResponse response,
+                          HttpServletRequest request) {
         String id=request.getParameter("id");
         System.out.println(id);
         if (id!=null&&id!=""){
-            model.addAttribute("preview","preview"+request.getParameter("id"));
+            modelMap.addAttribute("preview","preview"+request.getParameter("id"));
+            modelMap.addAttribute("fileName","preview"+request.getParameter("id"));
         }else {
-            model.addAttribute("preview","preview");
+            modelMap.addAttribute("preview","preview");
+            modelMap.addAttribute("fileName","preview");
+
         }
         return "/preview";
     }

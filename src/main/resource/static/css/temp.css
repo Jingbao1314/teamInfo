@@ -1,0 +1,27 @@
+.xx{
+    height: 408px;
+    width: 600px;
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 110%;
+    right: 34%;
+}
+
+.download a button {
+    width: 47%;
+    height: 50px;
+    background-color: #ee7700;
+    float: left;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+.return a button {
+    width: 47%;
+    height: 50px;
+    background-color: #ee7700;
+    float: right;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
