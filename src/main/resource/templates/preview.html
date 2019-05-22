@@ -19,7 +19,8 @@
             <button type="button">返回</button>
             <div class="return">
                 <a th:href="'http://127.0.0.1:8080/download?fileName=' + ${fileName}"
-                   th:download="${fileName}+'.docx'" target="_self">
+                   th:download="${fileName}+'.docx'" target="_self"
+                   name="download">
                     <button>下载
                     </button>
                 </a>

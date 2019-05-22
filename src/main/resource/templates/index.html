@@ -17,6 +17,7 @@
     <!-- //Online fonts -->
     <!-- style.css-file -->
     <link th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
+    <link th:href="@{/css/upLoad.css}" rel='stylesheet' type='text/css' />
 
 </head>
 <!-- Head -->
@@ -26,10 +27,11 @@
 <header>
     <div class="top-header" id="home">
         <div class="container">
-            <div class="col-md-4 col-sm-4 col-xs-4 top-right">
+            <p th:text="${isLogin}"></p>
+            <div class="col-md-4 col-sm-4 col-xs-4 top-right" th:style="${hide}">
                 <a href="http://127.0.0.1:8080/login" data-toggle="modal"
                    data-target="#myModal1"><span></span>登录</a>
-                <a href="#" data-toggle="modal" data-target="#myModal2"><span></span>注销</a>
+                <!--<a href="#" data-toggle="modal" data-target="#myModal2"><span></span>注销</a>-->
             </div>
             <div class="clearfix"></div>
         </div>
@@ -51,8 +53,11 @@
                 <div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-3 w3ls-navma" id="link-effect-3">
                         <ul class="nav1 navbar-nav nav nav-wil">
-                            <li><a placeholder="通讯录" href="http://127.0.0.1:8080/colorfulsociety/activity" class="scroll">通讯录</a></li>
-                            <li><a placeholder="共享简历" href="http://127.0.0.1:8080/colorfulsociety/activity" class="scroll">共享简历</a></li>
+                            <li><a placeholder="上传简历"
+                                   href="#"
+                                   class="scroll" onclick="show();">上传简历
+                            </a></li>
+                            <li><a placeholder="共享简历" class="scroll" onclick="show()">共享简历</a></li>
                             <li><a placeholder="个人中心" href="http://127.0.0.1:8080/colorfulsociety/officer" class="scroll">个人中心</a></li>
                             <li><a placeholder="下载中心" href="http://127.0.0.1:8080/colorfulsociety/download" class="scroll">下载中心</a></li>
                             <li><a placeholder="通知公告" href="http://127.0.0.1:8080/colorfulsociety/notice" class="scroll">通知公告</a></li>
@@ -65,6 +70,45 @@
         </div>
         <div class="clearfix"></div>
     </div>
+    <!--居中显示视图-->
+    <form action="http://127.0.0.1:8080/upLoad" method="post"
+          enctype="multipart/form-data" style="display: none">
+        <input type="file" name="fileName" id="upFile"/></p>
+        <!--<p><input type="submit" value="提交" id="submit" /></p>-->
+    </form>
+
+
+    <div class="dislog" style="display:none;" id="div1">
+        <!--内容-->
+        <div class="dis_cont">
+            <div class="cont_dis">
+                支持DOC、DOCX、PDF、JPG、PNG格式附件
+                文件大小不超过8M
+            </div>
+
+            <div class="dis_bott">
+                <!--<input class="left_name" type="file">-->
+                <label class="left_name" onclick="upLoad()">选择简历</label>
+                <label class="right_name" onclick="submits()">上传简历</label>
+            </div>
+        </div>
+    </div>
+    <script>
+        function show() {
+//        alert("xxx");
+            document.getElementById("div1").setAttribute("style","display:block");
+        }
+        function upLoad() {
+            document.getElementById("upFile").click();
+//            document.getElementById("div1").setAttribute("style","display:none");
+//            document.forms[0].submit();
+        }
+        function submits() {
+            var evt=document.forms[0].submit();
+
+
+        }
+    </script>
 </section>
 
 <section class="team" id="staff">
@@ -158,7 +202,9 @@
             <div class="clearfix"></div>
         </div>
     </div>
+
 </section>
+
 
 </body>
 

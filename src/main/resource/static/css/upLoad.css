@@ -1,0 +1,115 @@
+body {
+    margin: 0 auto;
+}
+
+.cont {
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+/*显示按钮*/
+
+.shows {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    font-size: 20px;
+    height: 70px;
+    text-align: center;
+    background-color: #66cccc;
+    color: #fff;
+    line-height: 70px;
+}
+/*隐藏*/
+
+.nones {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    font-size: 20px;
+    height: 70px;
+    text-align: center;
+    background-color: #DD524D;
+    color: #fff;
+    line-height: 70px;
+}
+/*弹窗*/
+
+.dislog {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+    background-color: #000;
+    opacity: 0.8;
+}
+/*状态*/
+
+.list {
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+
+.dis_cont {
+    position: relative;
+    border-radius: 10px;
+    top: 25%;
+    width: 45%;
+    display: inline-block;
+    height: 160px;
+    background-color: #66cccc;
+}
+/*确认取消*/
+
+.dis_bott {
+    position: absolute;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    height: 70px;
+    background-color: #f5f5f5;
+    bottom: 0px;
+}
+/*取消按钮*/
+
+.left_name {
+    position: absolute;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    left: 0px;
+    width: 50%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #fff;
+}
+/*确认*/
+
+.right_name {
+    position: absolute;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+    right: 0px;
+    width: 49%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #fff;
+}
+/* 提示*/
+
+.cont_dis {
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 20px 20px;
+}

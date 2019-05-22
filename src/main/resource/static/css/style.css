@@ -46,6 +46,7 @@ h6 {
 
 p {
 	margin: 0;
+	/*color: #f99104;*/
 }
 
 ul {
@@ -80,7 +81,7 @@ a:hover {
 }
 
 .top-header {
-	background: #000;
+	background: #66cccc;
 	padding: 15px 0;
 }
 

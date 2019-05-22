@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link th:href="@{/css/upLoad.css}" rel='stylesheet' type='text/css' />
+</head>
+
+
+<body>
+
+<!--居中显示视图-->
+<div class="dislog" style="display:none;" id="div1">
+    <!--内容-->
+    <div class="dis_cont">
+        <div class="cont_dis">
+            支持DOC、DOCX、PDF、JPG、PNG格式附件
+            文件大小不超过8M
+        </div>
+
+        <div class="dis_bott">
+            <label class="left_name" onclick="upLoad()">上传简历</label>
+            <!--<label class="right_name" onclick="submits()">确认</label>-->
+
+        </div>
+
+    </div>
+
+</div>
+<div class="cont">
+    <div class="list">
+        <label class="shows" onclick="shows()">显示</label>
+        <label class="nones" onclick="nones()">隐藏</label>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+<script>
+    //显示遮罩弹窗
+    function shows(){
+        document.getElementById("div1").setAttribute("style","display:block");
+//        $('.dislog').css("display","block");
+    }
+
+    function upLoad(){
+        window.location="https://blog.csdn.net/qq_35695041";
+    }
+    //取消
+    function cances(){
+        document.getElementById("div1").setAttribute("style","display:none");
+    }
+</script>
+</body>
+</html>
